@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Районы Белграда — локальный макет</title><link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="map.css"><script defer src="vendor/leaflet.js"></script><script defer src="map.js"></script></head>
+<body class="embedded-map">
+  <header><div><span>Релокац • районы Белграда</span><h1>Где жить в Белграде?</h1><p>Карта города с описанием районов — для вашего удобства. Белград очень неоднородный: в каждом районе своя атмосфера, архитектура и привычный ритм жизни.</p></div><div class="legend"><i></i> Границы муниципалитетов</div></header>
+  <main>
+    <section class="map-shell" aria-label="Интерактивная карта районов Белграда">
+      <div class="map-toolbar"><b>Белград</b><span>Реки Сава и Дунай</span><button id="reset">Показать всё</button></div>
+      <div id="oldMap" hidden><svg class="city-map" viewBox="0 0 1000 690" role="img" aria-labelledby="map-title map-desc">
+        <title id="map-title">Схематичная карта районов Белграда</title><desc id="map-desc">Девять популярных зон для долгосрочной аренды, разделённых реками Савой и Дунаем.</desc>
+        <path class="river river-danube" d="M0 115 C210 75 335 115 465 170 C610 230 820 210 1000 155 L1000 250 C810 300 635 300 455 245 C305 200 165 180 0 225Z"/>
+        <path class="river river-sava" d="M380 690 C420 570 430 480 455 390 C480 300 520 250 585 205 L690 240 C595 310 555 375 535 455 C510 560 510 625 500 690Z"/>
+        <g class="district" data-id="zemun" tabindex="0"><path d="M40 40 L300 35 390 100 365 205 230 210 120 180 35 105Z"/><text x="200" y="120">Земун</text></g>
+        <g class="district" data-id="novi" tabindex="0"><path d="M55 235 L230 220 395 245 430 360 385 500 230 535 70 450Z"/><text x="240" y="360">Новый Белград</text></g>
+        <g class="district" data-id="banovo" tabindex="0"><path d="M80 470 L230 545 375 515 410 620 330 675 125 650 45 565Z"/><text x="225" y="585">Баново-Брдо</text></g>
+        <g class="district" data-id="dorcol" tabindex="0"><path d="M490 240 L585 205 700 230 720 325 625 360 520 330Z"/><text x="605" y="285">Дорчол</text></g>
+        <g class="district" data-id="waterfront" tabindex="0"><path d="M435 355 L525 330 615 365 580 465 500 520 420 455Z"/><text x="510" y="415">Савамала</text></g>
+        <g class="district" data-id="vracar" tabindex="0"><path d="M625 355 L735 325 805 405 760 505 650 500 580 465Z"/><text x="695" y="430">Врачар</text></g>
+        <g class="district" data-id="zvezdara" tabindex="0"><path d="M720 225 L890 205 970 300 945 440 815 420 735 325Z"/><text x="850" y="325">Звездара</text></g>
+        <g class="district" data-id="dedinje" tabindex="0"><path d="M505 525 L650 495 760 510 730 640 590 675 455 620Z"/><text x="605" y="580">Дединье</text></g>
+        <g class="district" data-id="vozdovac" tabindex="0"><path d="M765 445 L945 455 985 590 900 675 735 640Z"/><text x="860" y="560">Вождовац</text></g>
+        <text class="water-label" x="155" y="205">ДУНАЙ</text><text class="water-label rotate" x="475" y="505">САВА</text>
+      </svg></div>
+      <div id="cityMap" class="city-map" role="application" aria-label="Карта Белграда с границами городских муниципалитетов"></div>
+      <div class="hover-card" id="hoverCard" hidden><img alt=""><div><b></b><p></p><small>Нажмите для подробностей</small></div></div>
+      <p class="map-note"><b>Как читать карту:</b> цветные контуры — административные муниципалитеты; подписи с точкой — привычные названия микрорайонов. Например, Дорчол находится в Стари-Граде, а Дединье и Савамала — в Савски-Венаце. Геометрия границ загружена из OpenStreetMap; подложка нужна только при наличии интернета.</p>
+    </section>
+    <aside class="compare"><p class="kicker">Быстрый выбор</p><h2>Что для вас важнее?</h2><div class="filters" role="group" aria-label="Фильтр районов"><button data-filter="walk">Пешком до центра</button><button data-filter="family">Для семьи</button><button data-filter="modern">Новый фонд</button><button data-filter="green">Зелень и тишина</button><button data-filter="value">Баланс цены</button></div><div class="shortlist" id="shortlist"></div><p class="fine">Характер районов — ориентир для первого отбора. Дом, улица, отопление, шум и транспорт всегда проверяются по конкретному адресу.</p></aside>
+  </main>
+  <section class="detail" id="detail" aria-live="polite"><div class="detail-empty"><span>↖</span><h2>Выберите район на карте</h2><p>Здесь появится развёрнутая сводка: кому подходит, архитектура, воздух зимой, транспорт и точки притяжения.</p></div></section>
+  <footer><span>Релокац • прототип карты районов</span><span>Только локально — не опубликовано в GitHub</span></footer>
+</body></html>

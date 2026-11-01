@@ -38,6 +38,15 @@ main,.map-shell{min-width:0}
 .map-advice b{font-family:Georgia,serif;font-size:18px}
 .map-advice p{margin:7px 0 0;line-height:1.55;font-size:13px}
 @media(max-width:600px){.gallery-thumb{height:105px}.useful-links{display:grid}.useful-links a{text-align:center}}
+.rent-card{display:grid;gap:7px;margin:20px 0;padding:16px 18px;background:var(--cream);border-left:4px solid var(--gold)}
+.rent-card b{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--rust)}
+.rent-card strong{font-family:Georgia,serif;font-size:18px;line-height:1.35}
+.rent-card small{color:#6a716b;line-height:1.45}
+.tip-gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3px;background:#fff}
+.tip-gallery img{width:100%;height:112px;object-fit:cover}
+.tip-gallery img:not(:first-child){height:112px}
+.tip-rent{font-size:11px;line-height:1.4;color:var(--rust)}
+@media(max-width:600px){.tip-gallery img,.tip-gallery img:not(:first-child){height:92px}}
 .embedded-map>header,.embedded-map>footer{display:none}
 .embedded-map main{min-height:0}
 .embedded-map .map-shell{padding-top:28px}
